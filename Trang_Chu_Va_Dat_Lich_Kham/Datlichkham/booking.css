@@ -321,9 +321,10 @@ header {
 /* Thao tác chọn Ngày tháng */
 .date-input-wrapper {
     position: relative;
+    width: 100%;
 }
 
-.date-input-wrapper input {
+.date-input-wrapper input[type="date"] {
     width: 100%;
     padding: 12px 16px;
     border: 1px solid #1e293b;
@@ -331,6 +332,18 @@ header {
     font-size: 14px;
     font-weight: 600;
     outline: none;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.date-input-wrapper input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    inset: 0;
+    width: auto;
+    height: auto;
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
 }
 
 .date-input-wrapper .material-symbols-outlined {
@@ -339,6 +352,12 @@ header {
     top: 50%;
     transform: translateY(-50%);
     color: #64748b;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.date-input-wrapper .material-symbols-outlined:hover {
+    color: #003da5;
 }
 
 
